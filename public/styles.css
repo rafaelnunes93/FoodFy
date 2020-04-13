@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;900&display=swap');
+
+:root{
+    --primary-color:#7159c1;
+    --secondary-color:#F7DF1E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: white;
+    color: black;
+    font-family: 'Roboto Slab';
+    height: auto;
+}
+
+.container{
+    width: 980px;
+    height: auto;
+    margin: auto;
+}
+
+header{
+    padding: 36px 0 30px 0;
+    display: grid;
+    grid-template-columns: 90.6px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+header a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #111;
+    margin: 30px;
+}
+
+header  a:hover {
+    font-size: 18px;
+    transition: color 200ms;
+  }
+
+.links{
+    text-align: center;
+}
+
+header .logo img{
+    height: 27px;
+  }
+
+.rectangle{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    background-color: #FBDFDB;
+}
+
+.rectangle-left{
+    margin: auto;
+    padding: 70px;
+    font-size: 18px;
+
+}
+
+.rectangle-left h1{
+    font-size: 32px;
+}
+
+
+
+.rectangle-right{
+    margin: auto;
+    padding-top: 6%;
+
+}
+
+.receitas{
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 130px;
+}
+
+.melhores{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.card{
+    margin-top: 80px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 180px;
+    position: relative;
+    font-family: 'Roboto Regular';
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card-image img{
+    width: 100%;
+    height: 180px !important;
+    border-radius: 20px;
+}
+
+.card-descricao{
+    margin-top: 10px;
+}
+
+.card-descricao h4{
+    font-size: 18px;
+}
+
+.card-descricao p{
+    font-size: 14px;
+    margin-top: 5px;
+    color: #777;
+}
+
+footer{
+    position: relative;
+    font-size: 14px;
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+    color: #999;
+}
+
+
+/* ============Sobre=========== */
+
+.infoSobre p{
+    margin:20px 0;
+    color: #444;
+    font-size: 18px;
+}
+
+.infoSobre h3{
+    font-size: 20px;
+    color: #111;
+}
+
+
+
+/* ===============MODAL============ */
+
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.modal{
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    margin:25vh auto;
+    position: relative;
+}
+
+.imagem-modal{
+    padding: 30px;
+    width: 90%;
+    height: 250px;
+    margin: auto;
+}
+
+.imagem-modal img{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+.modal-content{
+    width: 100%;
+    text-align: center;
+}
+
+.modal-content h3{
+    font-size: 24px;
+    color: #111;
+    margin-bottom:10px ;
+}
+
+
+.modal .close-modal{
+    color: black;
+    position: absolute;
+    cursor: pointer;
+    top: 90%;
+    width: 100%;
+    text-align: center;
+}
+
+/* MODAL ACTIVE */
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* === RECIPE === */
+
+#recipes {
+    margin-top: 20px;
+  }
+  
+  #recipes #card p {
+    text-align: center;
+  }
+  
+  #card img {
+    border-radius: 30px 30px;
+  }
+  
+  #recipes #card .cards-title p {
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: bold;
+  }
+  
+   .cards-author p {
+    font-size: 22px;
+    line-height: 32px;
+    filter: brightness(80%);
+  }
+  
+  #recipes #ingredients div,
+  #recipes #preparation div,
+  #recipes #information div {
+    display: flex;
+    margin: 20px 0px;
+  }
+  
+  #recipes #ingredients h2,
+  #recipes #preparation h2,
+  #recipes #information h2 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  
+  #recipes span {
+    margin: 10px 0px 0px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  #recipes span:hover {
+    color: rgb(226, 161, 64);
+    transition: color 200ms;
+  }
+  
+  .topic-content.hidden {
+    display: none !important;
+  }
+  
+  #recipes #ingredients li,
+  #recipes #preparation li {
+    list-style-position: inside;
+  }
+  
+  #recipes #ingredients li,
+  #recipes #preparation li,
+  #recipes #information p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #444;
+  }
+  
+  #recipes #information p {
+    text-align: justify;
+  }
+
+
+
+  /* Admin  */
+  .admin{
+      width: 100%;
+      background-color: #000;
+      padding: 32px;
+  }
+
+.logoadmin h3{
+    color: white;
+}
+
+.top-header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.top-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-right a{
+    background-color: #6558C3;
+    padding: 10px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.admin-melhores{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 40px;
+}
+
+
+.admin-card{
+    display: grid;
+    grid-template-columns: 190px  1fr;
+    position: relative;
+    font-family: 'Roboto Regular';
+}
+
+.admin-card-image{
+    position: relative;
+    width: 170px;
+    height: 90px;
+
+}
+
+
+.admin-card-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.admin-card-descricao a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.admin-card-descricao{
+    margin-top: 10px;
+}
+
+.admin-card-descricao h4{
+    font-size: 18px;
+}
+
+.admin-card-descricao p{
+    font-size: 14px;
+    margin-top: 5px;
+    color: #777;
+}
+
+
+.pageTitle{
+    margin-top: 24px;
+}
+
+
+    /* ==============FORMULARIO RECEITAS */
+ .formItem{
+    margin-top: 25px;
+    position: relative;
+ }
+
+ .relative{
+    position: relative;
+ }
+
+.formTitle{
+    font-weight: bold;
+    margin: 10px 0;
+}
+.formItem input{
+    width: 100%;
+    height: 50px;
+    outline: none;
+    color: #555;
+    font-size: 18px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+
+
+.formItem textarea{
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    line-height: 1.5;
+    color: #555;
+    font-size: 18px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #999;
+}
+
+.add-ingredient,.add-preparation{
+    color: var(--primary-color);
+}
+
+.add-ingredient:hover,.add-preparation:hover{
+    cursor: pointer;
+    color: #5627f0;
+}
+
+button[type="submit"],a.button{
+    padding: 8px 32px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    width: 200px;
+    font-size: 16px;
+}
+
+/* ==================admin-header-form============= */
+
+.form-header{
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.form-header h3{
+    font-size: 24px;
+    font-weight: bold;
+    color: #111;
+}
+
+.actions
+{
+    display: flex;
+    justify-content: flex-end;        
+    width: 100%;
+}
+
+.delete{
+    background-color:#DC4747 !important;
+    margin-right: 10px;
+}
+/* ===============Aba Show ================ */
+
+
+.img-show{
+    margin-top: 20px;
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+}
+
+.show-title-author{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-title-author h2{
+    font-size: 36px;
+    color: #111;
+}
+
+
+.show-title-author p{
+    margin-top: 8px;
+    font-size: 20px;
+    color: #777;
+}
+
+.show-header-right{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.show-button{
+    text-align: center;
+    color: #fff;
+    background-color:#6558C3 ;
+    width: 136px;
+    height:37px;
+    line-height: 37px;
+    font-weight: bold;
+}
+
+.show-detalhes{
+    width: 100%;
+    margin-top: 15px;
+    
+}
+
+.show-detalhes h3{
+    font-size: 24px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+
+.show-detalhes ul,p{
+    color: #444;
+    font-size: 18px;
+    list-style:none;
+    letter-spacing: 1px;
+}
+
+.show-detalhes ul li{
+    margin: 5px 0;
+}
+
+
+
+/* ===============Aba Editar ====== */
+

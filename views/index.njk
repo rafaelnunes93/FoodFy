@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{%block head%}
+    <title>FoodFy</title>
+{% endblock %}
+
+{% block content %}
+        
+        <div class="container rectangle">
+            <div class="rectangle-left">
+                <h2>As melhores receitas</h2>
+                <p>Aprenda a construir os melhores pratos 
+                    com receitas criadas por profissionais do mundo inteiro.
+                </p>
+            </div>
+            <div class="rectangle-right">
+                <img src="/assets/chef.png" alt="chef">
+            </div>
+        </div>
+
+        <section class="container receitas">
+            <h1>Mais Acessadas</h1>
+                <div class="melhores"> 
+                    {% for i in range(0, 6) %}
+                    <div class="card" id="{{recipes[i].id}}">
+                        <div class="card-image">
+                            <img src="{{recipes[i].recipeImg}}" alt="">
+                        </div>
+                        <div class="card-descricao">
+                            <h4>{{recipes[i].title}}</h4>
+                            <p>por: {{recipes[i].author}}</p>
+                        </div>
+                    </div>  
+                    {% endfor %}               
+                </div>
+        </section>               
+
+        <script src="/scripts.js"></script>
+      
+ {% endblock %}
