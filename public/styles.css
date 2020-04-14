@@ -437,27 +437,26 @@ button[type="submit"],a.button{
 
 .form-header{
     margin-top: 32px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+    display: grid;  
+    grid-template-columns: 40% 1fr;
 }
 
 .form-header h3{
-    font-size: 24px;
     font-weight: bold;
-    color: #111;
+    font-size: 32px;
 }
 
 .actions
 {
     display: flex;
-    justify-content: flex-end;        
+    justify-content: flex-end;
+    margin: 10px;
     width: 100%;
+    
 }
 
 .delete{
     background-color:#DC4747 !important;
-    margin-right: 10px;
 }
 /* ===============Aba Show ================ */
 

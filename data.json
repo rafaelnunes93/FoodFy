@@ -55,23 +55,6 @@
       "information": "            ->            ->            ->            ->     ...\r\n        \r\n        \r\n        \r\n        "
     },
     {
-      "id": 5,
-      "recipeImg": "https://img.itdg.com.br/tdg/images/recipes/000/107/226/311522/311522_original.jpg?mode=crop&width=710&height=400",
-      "title": "CHURRASCO EXPRESSO FEITO NO FORNO",
-      "author": "Antonio Silva",
-      "ingredients": [
-        "1 kg de contra filé (pedaço inteiro)",
-        "1/2 kg de linguiça para churrasco",
-        "1/2 kg de asinha de frango com a coxinha da asa (já temperada a seu gosto)"
-      ],
-      "preparation": [
-        "Tempere a peça de contrafilé com sal grosso.",
-        "Em uma assadeira, organize a linguiça de maneira que forme um ",
-        "Leve a assadeira a um forno preaquecido a 180º C e continue assando em potência alta por 1 hora."
-      ],
-      "information": "            ->Se você perceber que ao término do receita a carne esteja com excesso de sal, basta \"dar umas batidas\" leves na carne com a ajuda de uma faca, para extrair o excesso de sal. Não fure a carne, pois ela perderá todo seu sabor. E o melhor de tudo, essa receita não dá fumaça, não te enche de gordura e nem precisa ficar vigiando pra não queimar.\r\n        "
-    },
-    {
       "id": 6,
       "recipeImg": "https://img.itdg.com.br/tdg/images/recipes/000/000/688/24332/24332_original.jpg?mode=crop&width=710&height=400",
       "title": "LASANHA ESPECIAL LIGHT",
@@ -121,7 +104,11 @@
       "ingredients": [
         "50 g de café solúvel",
         "2 xícaras de açúcar refinado",
-        "1 xícara de água"
+        "1 xícara de água",
+        "Agua quente",
+        "777777777777777777",
+        "1111111111111111111",
+        "333333333333333333"
       ],
       "preparation": [
         " Junte todos os ingredientes e bata na batedeira durante 15 minutos até ficar um creme.",
@@ -129,9 +116,13 @@
         "Este creme é para ser servido do seguinte modo",
         "1 colher de sobremesa em 1 xícara de café quente (já pronto) ou 2 colheres de sobremesa em 1 xícara de leite fervendo.",
         "Está pronto uma deliciosa bebida cremosa para aquecer as noites frias de inverno.",
-        "Fica muito delicioso."
+        "Fica muito delicioso.",
+        "5555555555555",
+        "4444444444444444444",
+        "44444444444444444444444444444",
+        "111111111111111111111111111111111111"
       ],
-      "information": "            ->            ->->Para acompanhar o seu café cremoso, que tal fazer um bolinho\r\n   \r\n        \r\n        "
+      "information": "                ->>Para acompanhar o seu café cremoso, que tal fazer um bolinho\r\n   \r\n        \r\n        \r\n            \r\n            "
     },
     {
       "id": 8,
