@@ -1,7 +1,6 @@
 const express = require('express');
 const routes = express.Router();
-const recipes = require('./controllers/recipesController')
-const data = require("./data");  //tirar isso aqui depois
+const recipes = require('./app/controllers/recipesController')
 
 
 // =====  ADMIN =========  
@@ -20,39 +19,39 @@ routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita
 
 // ======== Pagina Principal=======
 
-routes.get("/", function (req, res) {
-    return res.render("index", { recipes: data.recipes })
-})
+// routes.get("/", function (req, res) {
+//     return res.render("index", { recipes: data.recipes })
+// })
 
-routes.get("/sobre", function (req, res) {
-    return res.render("sobre")
-})
+// routes.get("/sobre", function (req, res) {
+//     return res.render("sobre")
+// })
 
-routes.get("/receitas", function (req, res) {
-    return res.render("receitas", { recipes: data.recipes })
-})
+// routes.get("/receitas", function (req, res) {
+//     return res.render("receitas", { recipes: data.recipes })
+// })
 
-routes.get("/recipe", function (req, res) {
+// routes.get("/recipe", function (req, res) {
 
-    const id = req.query.id
+//     const id = req.query.id
 
-    const recipe = data.recipes.find(function (recipe) {
-        if (recipe.id == id) {
-            return true
-        }
-    })
+//     const recipe = data.recipes.find(function (recipe) {
+//         if (recipe.id == id) {
+//             return true
+//         }
+//     })
 
-    if (!recipe) {
-        return res.render("not-found")
-    }
+//     if (!recipe) {
+//         return res.render("not-found")
+//     }
 
-    return res.render("recipe", { recipes: data.recipes })
-})
+//     return res.render("recipe", { recipes: data.recipes })
+// })
 
 
-routes.use(function (req, res) {
-    return res.render("not-found")
-})
+// routes.use(function (req, res) {
+//     return res.render("not-found")
+// })
 
 
 
