@@ -433,11 +433,18 @@ footer{
 .admin-card-descricao-chef a{
     color: var(--primary-color);
     text-decoration: none;
+    font-size: 14px;
 }
 
 .admin-card-descricao-chef h4{
+    font-size: 18px;
+}
+
+.admin-card-descricao-chef p{
+    font-size: 14px;
     margin-bottom: 8px;
 }
+
 
 .admin-card-descricao-chef{
     margin-top: 4px;
