@@ -1,48 +1,52 @@
 {% extends "../adminlayout.njk" %}
 
 {%block content%}
-  
+
   <div class="container ">
     <div class="show-header">
-        <h2>Receita: {{recipe.title}}</h2>
-        <div class="show-header-right"><a href="/admin/recipes/{{recipe.id}}/edit" class="show-button" >Editar Receita</a></div>
+      <h2>Receita:
+        {{recipe.title}}</h2>
+      <div class="show-header-right">
+        <a href="/admin/recipes/{{recipe.id}}/edit" class="show-button">Editar Receita</a>
+      </div>
     </div>
 
-    <img class="img-show" src="{{recipe.recipeImg}}" alt="">
+    <img class="img-show" src="{{recipe.image}}" alt="">
 
     <div class="show-title-author">
-        <h2>{{recipe.title}}</h2>
-          <p>Por: {{recipe.author}}</p>
+      <h2>{{recipe.title}}</h2>
+      <p>Por:
+        {{recipe.author}}</p>
     </div>
 
     <div class="show-detalhes">
       <h3>Ingredientes</h3>
-       <ul>
-          {% for ingredient in recipe.ingredients %}
-          <li>- {{ingredient}}</li>
-          {% endfor %}
-        </ul>
+      <ul>
+        {% for ingredient in recipe.ingredients %}
+          <li>-
+            {{ingredient}}</li>
+        {% endfor %}
+      </ul>
 
     </div>
 
     <div class="show-detalhes">
       <h3>Ingredientes</h3>
-       <ul>
-          {% for item in recipe.preparation %}
-          <li>- {{item}}</li>
-          {% endfor %}
-        </ul>
+      <ul>
+        {% for item in recipe.preparation %}
+          <li>-
+            {{item}}</li>
+        {% endfor %}
+      </ul>
 
     </div>
 
     <div class="show-detalhes">
       <h3>Informações Adicionais</h3>
-       <p>{{recipe.information}}</p>
+      <p>{{recipe.information}}</p>
 
     </div>
-  
-  </div>
-  
 
+  </div>
 
 {% endblock %}

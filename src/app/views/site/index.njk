@@ -1,4 +1,4 @@
-{% extends "layout.njk" %}
+{% extends "../layout.njk" %}
 
 {%block head%}
     <title>FoodFy</title>
@@ -22,13 +22,13 @@
             <h1>Mais Acessadas</h1>
                 <div class="melhores"> 
                     {% for i in range(0, 6) %}
-                    <div class="card" id="{{recipes[i].id}}">
+                    <div class="card" id="{{recipe[i].id}}">
                         <div class="card-image">
-                            <img src="{{recipes[i].recipeImg}}" alt="">
+                            <img src="{{recipe[i].image}}" alt="">
                         </div>
                         <div class="card-descricao">
-                            <h4>{{recipes[i].title}}</h4>
-                            <p>por: {{recipes[i].author}}</p>
+                            <h4>{{recipe[i].title}}</h4>
+                            <p>por: {{recipe[i].author}}</p>
                         </div>
                     </div>  
                     {% endfor %}               

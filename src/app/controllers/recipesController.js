@@ -1,71 +1,91 @@
-const {date} = require('../../lib/utils')
-const {db} = require('../../config/db')
 
-exports.index = function (req, res) {
-    return res.redirect("./recipes")
-}
-
-
-//Create é uma rota para a pagina de criacão de uma nova receita
-exports.create = function (req, res) {
-    return res.render('./admin/recipes/create')
-}
+const Recipe = require('../models/recipesModel')
 
 
 module.exports = {
     //redireciona para a pafina inicial de receitas
-    index(req, res){return res.redirect("./recipes")},
+
+    index(req, res){
+
+        Recipe.all(function(recipe){
+            return res.render("admin/recipes/index",{recipe})
+        })
+
+    },
 
     //redireciona para a pagina administrativa para cadastrar receita
-    create(req, res){return res.render('./admin/recipes/create')},
+    create(req, res){
+        
+       Recipe.chefsSelectOptions(function(options){
+
+            return res.render('./admin/recipes/create',{chefOptions:options})
+       })
+
+    
+    },
 
     //METODO para efetuar o cadastro de receitas
     post(req, res){
+
         const keys = Object.keys(req.body)
 
         for(key of keys ){
             if(req.body[key] == ""){
-                return res.sende("Preencha todos os Campos")
+                return res.send("Preencha todos os Campos")
             }
         }
 
-        const query = `
-            INSERT INTO recipes(
-                image,
-                title,
-                ingredients,
-                preparation,
-                information,
-                created_at
-            ) VALUES ($1,$2,$3,$4,$5,$6,$7)
-            RETURNING id
+      Recipe.create(req.body,function(recipe){
+          return res.redirect(`/admin/recipes/${recipe.id}`)
+      })
 
-        `
+    },
 
 
-        const values = [
-            req.body.image,
-            req.body.title,
-            req.body.ingredients,
-            req.body.preparation,
-            req.body.information,
-            date(Date.now()).iso
+    show(req, res){
+        
+        Recipe.find(req.params.id,function(recipe){
+            if(!recipe) return res.send("Receita não encontrada")
 
-        ]
+            return res.render('./admin/recipes/show',{recipe})
+        })
 
-        db.query(query, values,function(err,results){
-            console.log(err)
-            console.log(results)
-            return
+    },
+
+ 
+    edit(req, res){
+
+        Recipe.find(req.params.id,function(recipe){
+            if(!recipe) return res.send("Receita não encontrada")
+
+            return res.render('./admin/recipes/edit',{recipe})
         })
 
     },
 
 
-    show(req, res){return},
-    edit(req, res){return},
-    put(req, res){return},
-    delete(req, res){return},
+    put(req, res){
+        const keys = Object.keys(req.body)
+
+        for(key of keys ){
+            if(req.body[key] == ""){
+                return res.send("Preencha todos os Campos")
+            }
+        }
+
+        Recipe.update(req.body,function(){
+            return res.redirect(`/admin/recipes/${req.body.id}`)
+        })
+    },
+
+
+    delete(req, res){
+        
+        Recipe.delete(req.body.id,function(){
+            return res.redirect(`/admin/recipes`)
+        })
+
+    },
 
 }
 

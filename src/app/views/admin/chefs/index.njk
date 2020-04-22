@@ -1,0 +1,40 @@
+{% extends "../adminlayout.njk" %}
+
+{%block head%}
+    <title>Admin-FoodFy</title>
+{% endblock %}
+
+ {% block content %} 
+
+
+   <section class="container receitas">
+       <section class="container receitas">
+        <div class="top-header">
+            <div>
+                <h2>Gerenciar Chefs</h2>
+            </div>
+            <div class="top-right">
+                <a href="/admin/chefs/create">+ Novo Chef</a>
+            </div>
+
+        </div>
+        <div class="admin-melhores-chefs">
+            {% for item in chef %}
+                 <div class="admin-card-chef" id="{{item.id}}">
+                    <div class="admin-card-image-chef">
+                        <img src="{{item.avatar_url}}" alt="">
+                    </div>
+                    <div class="admin-card-descricao-chef">
+                        <h4>{{item.name}}</h4>                        
+                        <a href="/admin/chefs/{{item.id}}">Visualizar</a>
+                    </div>
+
+                </div> 
+             {% endfor %}
+           
+        </div>
+    </section>
+           
+   </section>   
+  
+ {% endblock %}

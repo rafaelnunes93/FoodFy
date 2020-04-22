@@ -4,32 +4,34 @@
     <title>Admin-FoodFy</title>
 {% endblock %}
 
- {% block content %} 
+{% block content %}
 
-
-   <section class="container receitas">
-            <div class="top-header">
-                <div><h2>Gerenciar Receitas</h2></div>
-                <div class="top-right">
-                         <a href="/admin/recipes/create">+ Nova Receita</a>
-                </div>             
-                
+    <section class="container receitas">
+        <div class="top-header">
+            <div>
+                <h2>Gerenciar Receitas</h2>
             </div>
-                <div class="admin-melhores"> 
-                    {% for item in recipes%}
-                    <div class="admin-card" id="{{item.id}}">
-                        <div class="admin-card-image">
-                            <img src="{{item.recipeImg}}" alt="">
-                        </div>
-                        <div class="admin-card-descricao">
-                            <h4>{{item.title}}</h4>
-                            <p>por: {{item.author}}</p>
-                            <a href="/admin/recipes/{{item.id}}">Visualizar</a>
-                        </div>
-                        
-                    </div>  
-                    {% endfor %}               
+            <div class="top-right">
+                <a href="/admin/recipes/create">+ Nova Receita</a>
+            </div>
+
+        </div>
+        <div class="admin-melhores">
+            {% for item in recipe %}
+                <div class="admin-card" id="{{item.id}}">
+                    <div class="admin-card-image">
+                        <img src="{{item.image}}" alt="">
+                    </div>
+                    <div class="admin-card-descricao">
+                        <h4>{{item.title}}</h4>
+                        <p>por:
+                            {{item.author}}</p>
+                        <a href="/admin/recipes/{{item.id}}">Visualizar</a>
+                    </div>
+
                 </div>
-        </section>   
-  
- {% endblock %}
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

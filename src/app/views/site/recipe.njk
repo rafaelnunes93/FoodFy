@@ -1,4 +1,4 @@
-{% extends "layout.njk" %}
+{% extends "../layout.njk" %}
 
 {%block head%}
     <title>{{recipes.title}}</title>
@@ -8,7 +8,7 @@
        <section class="container" id="recipes">
     <div id="card">
       <div class="cards-image">
-        <img src="{{recipes.recipeImg}}" alt="Imagem de {{recipes.recipeImg}}">
+        <img src="{{recipes.image}}" alt="Imagem de {{recipes.image}}">
       </div>
       <div class="cards-title">
         <p>{{recipes.title}}</p>

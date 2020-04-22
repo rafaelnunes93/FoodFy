@@ -1,4 +1,4 @@
-{% extends "layout.njk" %}
+{% extends "../layout.njk" %}
 
 {%block head%}
     <title>Receitas - FoodFy</title>
@@ -12,7 +12,7 @@
                 {% for item in recipes%}
                     <div class="card" id="{{item.id}}">
                         <div class="card-image">
-                            <img src="{{item.recipeImg}}" alt="">
+                            <img src="{{item.image}}" alt="">
                         </div>
                         <div class="card-descricao">
                             <h4>{{item.title}}</h4>
