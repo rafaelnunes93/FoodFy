@@ -42,6 +42,8 @@ routes.get("/sobre", function (req, res) {
 
 routes.get("/site/receitas", site.receitas) //Exibir lista de rece
 
+routes.get("/site/chefs", site.listaChefs) //Exibir lista de rece
+
 routes.get("/site/recipe/:id", site.showrecipes)//Exibir detalhes das receitas
 
 

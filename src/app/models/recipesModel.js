@@ -6,7 +6,10 @@ module.exports = {
 
     all(callback) {
 
-        db.query(`SELECT * FROM recipes ORDER BY title ASC`, function (err, results) {
+        db.query(`SELECT recipes.*, chefs.name AS chefs_name
+        FROM recipes 
+        LEFT JOIN chefs ON (recipes.chef_id = chefs.id)        
+        ORDER BY title ASC`, function (err, results) {
             if(err) throw `DataBase error! ${err}`
 
 
@@ -38,8 +41,9 @@ module.exports = {
             data.ingredients,
             data.preparation,
             data.information,
-            data.chef_id,
-            date(Date.now()).iso
+            date(Date.now()).iso,
+            data.chef_id
+            
 
         ] 
 
@@ -51,7 +55,10 @@ module.exports = {
     },
 
     find(id, callback){
-        db.query(`SELECT * FROM recipes WHERE id = $1`, [id],function(err,results){
+        db.query(`SELECT recipes.*, chefs.name AS chefs_name
+        FROM recipes 
+        LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
+        WHERE recipes.id = $1`, [id],function(err,results){
             if(err) throw `DATABASE ERROR ! ${err}`
 
             callback(results.rows[0])

@@ -1,4 +1,5 @@
 const Recipe = require('../models/recipesModel')
+const Chefs = require('../models/chefsModel')
 
 
 module.exports = {
@@ -28,5 +29,16 @@ module.exports = {
             return res.render('site/recipe',{recipes})
         })
 
+    },
+
+
+
+    listaChefs(req,res){
+
+        Chefs.all(function(chef){
+            return res.render("site/chefs",{chef})
+        })
+
     }
+
 }

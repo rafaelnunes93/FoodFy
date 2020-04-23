@@ -1,28 +1,28 @@
 {% extends "../layout.njk" %}
 
 {%block head%}
-    <title>Receitas - FoodFy</title>
+    <title>FoodFy</title>
 {% endblock %}
 
 {% block content %}
 
-        <section class="container receitas">
-            
-            <div class="melhores">
-                {% for item in recipes%}
-                    <div class="card" id="{{item.id}}">
-                        <div class="card-image">
-                            <img src="{{item.image}}" alt="">
-                        </div>
-                        <div class="card-descricao">
-                            <h4>{{item.title}}</h4>
-                            <p>por: {{item.author}}</p>
-                        </div>
-                    </div>   
-                {% endfor %}
-            </div>
-        </section>
-        
+    <section class="container receitas">
 
-      <script src="/scripts.js"></script>
- {% endblock %}
+        <div class="melhores">
+            {% for item in recipes%}
+                <div class="card" id="{{item.id}}">
+                    <div class="card-image">
+                        <img src="{{item.image}}" alt="">
+                    </div>
+                    <div class="card-descricao">
+                        <h4>{{item.title}}</h4>
+                        <p>por:
+                            {{item.chefs_name}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <script src="/scripts.js"></script>
+{% endblock %}

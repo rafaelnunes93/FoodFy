@@ -4,9 +4,9 @@
         <div class="formItem">
             <div class="formTitle">Chef:</div>
             <div>
-                <select name="chef">
+                <select name="chef_id">
                     {%for chef in chefOptions %}}
-                        <option value="{{chef.id}}" {%if recipes.chef_id == chef.id %} selected{%endif%}="selected{%endif%}">
+                        <option value="{{chef.id}}" {%if recipes.chef_id == chef.id %} selected="selected{%endif%}">
                             {{chef.name}}
                         </option>
                         {%endfor%}

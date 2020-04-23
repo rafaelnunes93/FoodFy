@@ -1,0 +1,37 @@
+{% extends "../layout.njk" %}
+
+{%block head%}
+    <title>FoodFy</title>
+{% endblock %}
+
+{% block content %}
+
+    <section class="container receitas">
+        <section class="container receitas">
+            <div class="top-header">
+                <div>
+                    <h2>Chefs</h2>
+                </div>
+
+            </div>
+            <div class="admin-melhores-chefs">
+                {% for item in chef %}
+                    <div class="admin-card-chef" id="{{item.id}}">
+                        <div class="admin-card-image-chef">
+                            <img src="{{item.avatar_url}}" alt="">
+                        </div>
+                        <div class="admin-card-descricao-chef">
+                            <h4>{{item.name}}</h4>
+                            <p>{{item.total_recipes}}
+                                Receitas</p>
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+    </section>
+
+{% endblock %}
